@@ -346,16 +346,165 @@ namespace Practicas
         public static void Ejercicio11()
         { }
         public static void Ejercicio12()
-        { }
+        {
+            int a,b=0,c=0,d;
+            Console.WriteLine("Elegiste el Ejercicio No.12");
+            Console.WriteLine("");
+            Console.WriteLine("Sumar los números enteros de 1 a 100");
+            do
+            {
+                Console.WriteLine("Que metodo desea utilizar");
+                Console.WriteLine("a) Do/While         --> 1");
+                Console.WriteLine("b) While            --> 2");
+                Console.WriteLine("c) For              --> 3");
+                Console.WriteLine("No desea continuar  --> 4");
+                a = int.Parse(Console.ReadLine());
+                do
+                {
+                    if (a < 1 || a > 4)
+                    {
+                        Console.WriteLine("Numero no valido, vuelve a escribir un numero dentro del rango");
+                        a = int.Parse(Console.ReadLine());
+                    }
+                } while (a < 1 || a > 4);
+
+                Console.WriteLine("");
+
+                switch (a)
+                {
+                    case 1:
+                        Console.WriteLine("");
+                        Console.WriteLine("Eligio el metodo de Do/While");
+                        Console.WriteLine("");
+                        Console.WriteLine("Hasta que numero desea llegar");
+                        d = int.Parse(Console.ReadLine());
+                        do
+                        {
+                            b = b + 1;
+                            c = c + b;
+                        } while (b < d);
+                        Console.WriteLine("La suma de los 100 primeros numeros es   " + c);
+                        break;
+                    case 2:
+                        Console.WriteLine("");
+                        Console.WriteLine("Eligio el metodo de While");
+                        Console.WriteLine("");
+                        Console.WriteLine("Hasta que numero desea llegar");
+                        d = int.Parse(Console.ReadLine());
+                        while (b<d)
+                        {
+                            b = b + 1;
+                            c = c + b;
+                        }
+                        Console.WriteLine("La suma de los 100 primeros numeros es   " + c);
+                        break;
+                    case 3:
+                        Console.WriteLine("");
+                        Console.WriteLine("Eligio el metodo de For");
+                        Console.WriteLine("");
+                        Console.WriteLine("Hasta que numero desea llegar");
+                        d = int.Parse(Console.ReadLine());
+                        for (int e=0;e<d+1;e++) 
+                        {
+                            c = c + e;
+                        }
+                        Console.WriteLine("La suma de los 100 primeros numeros es   " + c);
+                        break;
+                }
+                Console.WriteLine("");
+                Console.WriteLine("Presione Enter para regresar al menu");
+                Console.ReadKey();
+            } while (a==4);
+        }
         public static void Ejercicio13()
-        { }
+        {
+            decimal f,h,i=0;
+            Console.WriteLine("Elegiste el Ejercicio No.13");
+            Console.WriteLine("");
+            Console.WriteLine("Se desea leer las calificaciones de una clase de informática y contar el número total de aprobados");
+            Console.WriteLine("Cuantos alumnos hay en la clase de informatica");
+            f = decimal.Parse(Console.ReadLine());
+            Console.WriteLine("Escriba las calificaciones");
+            for(int g=0;g<f;g++)
+            {
+                h = decimal.Parse(Console.ReadLine());
+                if (h >= 5) 
+                {
+                    i = i + 1;
+                }
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Hay  "+i+"  alumnos aprobados");
+            Console.WriteLine("");
+            Console.WriteLine("Presione Enter para regresar al menu");
+            Console.ReadKey();
+        }
         public static void Ejercicio14()
-        { }
+        {
+            int f, h, i=0;
+            Console.WriteLine("Elegiste el Ejercicio No.14");
+            Console.WriteLine("");
+            Console.WriteLine("Se pretende leer todos los empleados de una empresa y a la terminación de la lectura se debe visualizar un mensaje");
+            Console.WriteLine("«existen trabajadores mayores de 65 años en un número de ...» y el número de trabajadores mayores de 65 años.");
+            Console.WriteLine("Cuantos empleados hay en la empresa");
+            f = int.Parse(Console.ReadLine());
+            Console.WriteLine("Escriba las edades de los empreados");
+            for (int g = 0; g < f; g++)
+            {
+                h = int.Parse(Console.ReadLine());
+                if (h > 65)
+                {
+                    i = i + 1;
+                }
+            }
+            Console.WriteLine("");
+            Console.WriteLine("En la empresa hay  "+i+"  empleados que tienen mas de 65 años");
+            Console.WriteLine("");
+            Console.WriteLine("Presione Enter para regresar al menu");
+            Console.ReadKey();
+        }
         public static void Ejercicio15()
-        { }
+        {
+            int f, h, i=0,j=0,k=0;
+            Console.WriteLine("Elegiste el Ejercicio No.15");
+            Console.WriteLine("");
+            Console.WriteLine("Se desea conocer una serie de datos de una empresa con 50 empleados ¿Cuántos empleados ganan:");
+            Console.WriteLine("a) Más de 300.000 pesetas al mes(salarios altos)");
+            Console.WriteLine("b) Entre 100.000 y 300.000 pesetas(salarios medios");
+            Console.WriteLine("c) Menos de 100.000 pesetas(salarios bajos y empleados a tiempo parcial");
+            Console.WriteLine("Cuantos empleados hay en la empresa");
+            f = int.Parse(Console.ReadLine());
+            Console.WriteLine("Escriba el salario de los empreados");
+            for (int g = 0; g < f; g++)
+            {
+                h = int.Parse(Console.ReadLine());
+                if (h > 300000)
+                {
+                    i = i + 1;
+                }
+                if (h >=100000 || h<=300000)
+                {
+                    j = j + 1;
+                }
+                if (h < 100000)
+                {
+                    k = k + 1;
+                }
+            }
+            Console.WriteLine("");
+            Console.WriteLine("En la empresa hay  " + i + "  empleados que ganan mas de 300.000 pesetas");
+            Console.WriteLine("En la empresa hay  " + j + "  empleados que ganan entre 100.000 y 300.000 pesetas");
+            Console.WriteLine("En la empresa hay  " + k + "  empleados que ganan menos de 100.000");
+            Console.WriteLine("");
+            Console.WriteLine("Presione Enter para regresar al menu");
+            Console.ReadKey();
+        }
         public static void Ejercicio16()
-        { }
-        public static void Ejercicio17()
-        { }
+        {
+            Console.WriteLine("Elegiste el Ejercicio No.16");
+            Console.WriteLine("");
+            Console.WriteLine("Se dispone de un cierto número de valores de los cuales el último es el 999 y se desea ");
+            Console.WriteLine("determinar el valor máximo de las medias correspondientes a parejas de valores sucesivos.");
+        }
     }
 }
