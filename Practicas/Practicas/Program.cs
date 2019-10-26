@@ -10,6 +10,7 @@ namespace Practicas
     {
         static void Main(string[] args)
         {
+            Herramientas.Menu();
         }
     }
 }
