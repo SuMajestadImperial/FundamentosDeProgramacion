@@ -329,22 +329,98 @@ namespace Practicas
             int Posiciones;
             Console.WriteLine("Elegiste el Ejercicio No.9");
             Console.WriteLine("");
+            Console.WriteLine("Que rellene un array con los 100 primeros números enteros y los muestre en pantalla en orden ascendente.");
             Console.WriteLine("Ingrese el numero de posiciones que desea");
             Posiciones = int.Parse(Console.ReadLine());
+            Console.WriteLine("");
             int[] numeros = new int[Posiciones];
-            for (int x = 0; x < Posiciones; x++)
+            for (int i = 0; i < Posiciones; i++)
             {
-                numeros[x] = x + 1;
-                Console.WriteLine(numeros[x]);
+                numeros[i] = i+1;
+            }
+            for (int i = 0; i < Posiciones; i++)
+            {
+                Console.WriteLine(numeros[i]);
             }
             Console.WriteLine("");
             Console.WriteLine("Presione Enter para regresar al menu");
             Console.ReadKey();
         }
         public static void Ejercicio10()
-        { }
+        {
+            int Posiciones;
+            Console.WriteLine("Elegiste el Ejercicio No.10");
+            Console.WriteLine("");
+            Console.WriteLine("Que rellene un array con los 100 primeros números enteros y los muestre en pantalla en orden descendente.");
+            Console.WriteLine("Ingrese el numero de posiciones que desea");
+            Posiciones = int.Parse(Console.ReadLine());
+            Console.WriteLine("");
+            int[] numeros = new int[Posiciones];
+            for (int i = 0; i<Posiciones; i++)
+            {
+                numeros[i] = i+1; 
+            }
+            for (int i = Posiciones-1; i >-1 ; i--)
+            {
+                Console.WriteLine(numeros[i]);
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Presione Enter para regresar al menu");
+            Console.ReadKey();
+        }
         public static void Ejercicio11()
-        { }
+        {
+            int Posiciones;
+            Console.WriteLine("Elegiste el Ejercicio No.11");
+            Console.WriteLine("");
+            Console.WriteLine("Que lea 10 números por teclado, los almacene en un array y muestre la suma, resta, multiplicación y división de todos.");
+            Console.WriteLine("Ingrese el numero de posiciones que desea");
+            Posiciones = int.Parse(Console.ReadLine());
+            Console.WriteLine("");
+            int[] numeros = new int[Posiciones];
+            decimal suma, resta, division, multiplicacion,error1;
+            Console.WriteLine("Ingrese los numeros");
+            for (int i = 0; i < Posiciones; i++)
+            {
+                int y = int.Parse(Console.ReadLine());
+                numeros[i] = y;
+            }
+            suma = numeros[0];
+            resta = numeros[0];
+            division = numeros[0];
+            multiplicacion = numeros[0];
+            error1 = numeros[0];
+            string error = "Syntax Error";
+            for (int i = 1; i < Posiciones; i++)
+            {
+                suma = suma + numeros[i];
+                resta = resta - numeros[i];
+                if (numeros[i] == 0)
+                {
+                    error1 = 1000;
+                }
+                else
+                {
+                    division = division / numeros[i];
+                }
+                multiplicacion = multiplicacion * numeros[i];
+            }
+
+            Console.WriteLine("La suma de los numeros ingresados es  " + suma);
+            Console.WriteLine("La resta de los numeros ingresados es  " + resta);
+            if ( error1 == 1000)
+            {
+                Console.WriteLine("La division de los numeros ingresados es  " + error);
+            }
+            else
+            {
+                Console.WriteLine("La division de los numeros ingresados es  " + division);
+            }
+            Console.WriteLine("La multiplicacion de los numeros ingresados es  " + multiplicacion);
+            Console.WriteLine("");
+            Console.WriteLine("Presione Enter para regresar al menu");
+            Console.ReadKey();
+        }
         public static void Ejercicio12()
         {
             int a,b=0,c=0,d;
@@ -498,13 +574,35 @@ namespace Practicas
             Console.WriteLine("");
             Console.WriteLine("Presione Enter para regresar al menu");
             Console.ReadKey();
+            
         }
         public static void Ejercicio16()
         {
+            int a, b, c, d;
+            
             Console.WriteLine("Elegiste el Ejercicio No.16");
             Console.WriteLine("");
             Console.WriteLine("Se dispone de un cierto número de valores de los cuales el último es el 999 y se desea ");
             Console.WriteLine("determinar el valor máximo de las medias correspondientes a parejas de valores sucesivos.");
+            Console.WriteLine("Ingerse el valor del primer valor");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ingerse el valor del segundo valor");
+            b = int.Parse(Console.ReadLine());
+            c = (a + b) / 2;
+            while (a<=999 || b<=999) 
+            {
+                a = int.Parse(Console.ReadLine());
+                b = int.Parse(Console.ReadLine());
+                d = (a + b) / 2;
+                if (d>c)
+                {
+                    c = d;
+                }
+            }
+            Console.WriteLine("La metia maxima es  " + c);
+            Console.WriteLine("");
+            Console.WriteLine("Presione Enter para regresar al menu");
+            Console.ReadKey();
         }
     }
 }
