@@ -578,28 +578,25 @@ namespace Practicas
         }
         public static void Ejercicio16()
         {
-            int a, b, c, d;
+            decimal f, g, c=0, d=0;
             
             Console.WriteLine("Elegiste el Ejercicio No.16");
             Console.WriteLine("");
             Console.WriteLine("Se dispone de un cierto número de valores de los cuales el último es el 999 y se desea ");
             Console.WriteLine("determinar el valor máximo de las medias correspondientes a parejas de valores sucesivos.");
-            Console.WriteLine("Ingerse el valor del primer valor");
-            a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Ingerse el valor del segundo valor");
-            b = int.Parse(Console.ReadLine());
-            c = (a + b) / 2;
-            while (a<=999 || b<=999) 
+            Console.WriteLine("Ingrese el valor del primer valor");
+            Console.WriteLine("");
+            for(int e=1;e<999;e++)
             {
-                a = int.Parse(Console.ReadLine());
-                b = int.Parse(Console.ReadLine());
-                d = (a + b) / 2;
-                if (d>c)
+                f = e;
+                g = e+1;
+                c = (f+g)/2;
+                if(c>=d)
                 {
-                    c = d;
+                    d=c;
                 }
             }
-            Console.WriteLine("La metia maxima es  " + c);
+            Console.WriteLine("La media maxima es  " + d);
             Console.WriteLine("");
             Console.WriteLine("Presione Enter para regresar al menu");
             Console.ReadKey();
